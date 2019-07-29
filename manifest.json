@@ -1,0 +1,22 @@
+{
+  "name": "Durys Converter",
+  "description": "Durys Converter Extension - бұл веб-сайттарды тез әрі қатесіз аударуға арналған Google Chrome қосымша",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false,
+    "run_at": "document_end"
+  },
+  "content_scripts": [ {
+    "matches": ["http://www.google.com/*"],
+    "css": [ "style.css" ]
+ } ],
+  "browser_action": {
+    "default_title": "Converting",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
